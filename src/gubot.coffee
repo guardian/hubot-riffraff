@@ -172,10 +172,7 @@ module.exports = (robot) ->
           else
             teamcity.get_last_build(stack.name, app)
               .then (build_no) ->
-                console.log("GOT", build_no)
                 start_deploy(key, stack.name, app, build_no, stage, res)
-              .catch (err) ->
-                console.log("GOT", err)
             # TODO: check if currently deploying
             # TODO: only deploy if different version from current (allow force)
 

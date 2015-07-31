@@ -13,7 +13,6 @@ class TeamCity
 
   get_build_type_id: (project, name) ->
     url = @api_request_uri "/buildTypes/project:#{project},name:#{name}"
-    console.log(url)
     axios.get(url, {headers: @auth_header()})
       .then (resp) ->
         resp.data.id
