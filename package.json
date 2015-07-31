@@ -1,0 +1,31 @@
+{
+  "name": "hubot-riffraff",
+  "description": "A Hubot script for deploying releases using RiffRaff",
+  "version": "0.1.0",
+  "author": {
+    "name": "Sébastien Cevey <seb.cevey@guardian.co.uk>"
+  },
+  "license": "Apache-2",
+  "keywords": [
+    "hubot",
+    "hubot-scripts",
+    "deploy",
+    "riffraff"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/guardian/hubot-riffraff.git"
+  },
+  "bugs": {
+    "url": "https://github.com/guardian/hubot-riffraff/issues"
+  },
+  "main": "index.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "hubot": "2.x"
+  },
+  "homepage": "https://github.com/guardian/hubot-riffraff"
+}
