@@ -107,7 +107,7 @@ module.exports = (robot) ->
           res.send "##{build.number}: #{build.branchName} (#{build.status})"
 
 
-  robot.respond /rollback ([-\w]+?) in ([-\w]+)/, (res) ->
+  robot.respond /rollback ([-\w,]+?) in ([-\w]+)/, (res) ->
     # TODO: validate app, stage?
     [__, app_name, stage] = res.match
 
@@ -133,7 +133,7 @@ module.exports = (robot) ->
 
 
   # TODO: if /msg, no channel context - require explicit or default?
-  robot.respond /deploy ([-\w]+?) (?:build #?(\d+) |branch ([-\w]+?) )?to ([-\w]+)/, (res) ->
+  robot.respond /deploy ([-\w,]+?) (?:build #?(\d+) |branch ([-\w]+?) )?to ([-\w]+)/, (res) ->
     # TODO: validate app, stage?
     [__, app_name, build_no, branch, stage] = res.match
 
