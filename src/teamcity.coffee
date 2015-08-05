@@ -28,7 +28,7 @@ class TeamCity
         resp.data.build
 
   get_last_build: (project, name, branch) ->
-    @get_builds(project, name)
+    @get_builds(project, name, branch)
       .then (builds) ->
         successful_builds = builds.filter (build) -> build.status == 'SUCCESS'
         last_build = successful_builds[0]
