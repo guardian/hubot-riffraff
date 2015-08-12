@@ -182,6 +182,10 @@ module.exports = (robot) ->
   # TODO: list ASG with min/max/desired capacity - !! if desired != min
 
 
+  robot.respond /(hi|hey|hello)/i, (res) ->
+    res.send phrases_hi()
+
+
   robot.catchAll (res) ->
     if /^gubot:? /.test(res.message.text)
       res.send "#{phrases_what()}  [gubot: help]"
@@ -216,4 +220,17 @@ module.exports = (robot) ->
     "Sorry mate.",
     "Yes but no.",
     "Over my dead body."
+  )
+
+  phrases_hi = one_of(
+    "Hi!",
+    "Heya",
+    "Hey you",
+    "'sup",
+    "yo!",
+    "Yes?",
+    "How can I help?",
+    "http://i.giphy.com/fdcibA8CVjFFS.gif",
+    "http://i.giphy.com/12MWTDpnzvFbSU.gif",
+    "http://i.giphy.com/10QbzBy3KKAw36.gif"
   )
